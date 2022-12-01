@@ -9,10 +9,24 @@
     */
 
     //Entrada
-
-
+    let menorQ5 = 0;
+    let maiorQ5 = 0;
+    let total = 0;
     //Processamento
+    for(contador = 1;contador <= 15;contador++){
+        let nota = Number(prompt("Informe a nota que gostaria de da para a decoração de natal:"));
+        
+        if(nota < 5){
+            menorQ5++
+        }
+        else{
+            maiorQ5++
+        }
+        total = total + nota
+    }
+    const mediaCidade = total/15;
 
+    document.write(`Quantidade de pessoas que deram nota menior que 5: ${menorQ5} <br> Média da nota dada pelos cidadões: ${mediaCidade.toFixed(1)}`)
 
     //Saída
 

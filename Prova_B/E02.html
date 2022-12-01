@@ -8,9 +8,26 @@
     */
 
     //Entrada
-
-
+    let chapa1 = 0;
+    let chapa2 = 0;
     //Processamento
+    for(contador = 1; contador <= 14; contador++){
+        let representante = prompt("informe em quem você irá confiar o voto? 1- Chapa1 2- Chapa2"); 
+        if(representante === "1"){
+            chapa1++
+        }
+        else if(representante === "2"){
+            chapa2++
+        }
+    }
+    const percentual1 = (chapa1/14)*100;
+    const percentual2 = (chapa2/14)*100;
+
+    if(percentual1 > percentual2){
+        document.write(`A chapa 1 ganhou com ${percentual1.toFixed(2)}% dos votos!`)
+    }else {
+        document.write(`A chapa 2 ganhou com ${percentual2.toFixed(2)}% dos votos!`)
+    }
 
 
     //Saída
